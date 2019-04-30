@@ -1,0 +1,38 @@
+<div class="container">
+      <div *ngIf="update" >
+        <input type="text" name="name" [(ngModel)]=datatobeedited.name >
+        <input type="text" name="name" [(ngModel)]=datatobeedited.email >
+        <input type="text" name="name" [(ngModel)]=datatobeedited.mobile >
+        <input type="text" name="name" [(ngModel)]=datatobeedited.url>
+        <input type="text" name="name" [(ngModel)]=datatobeedited.description ngModel>
+        <button (click)='saveUpdate(datatobeedited)' type="button" class="btn btn-sm btn-info">save</button>
+      </div>   
+    <br>
+    <br>
+      <br>
+      <table class="table" bgcolor="#9932CC">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>Email</th>
+            <th>Mobile No</th>
+            <th>url</th>
+            <th>Date</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let i of test; let in=index'  class="success">
+            <td>{{i.AccountManagerID}}</td>
+             <td>{{i.email}}</td>
+             <td>{{i.mobile}}</td>
+             <td>{{i.url}}</td>
+             <td>{{i.date}}</td>
+             <td>{{i.description}}</td>
+             <button (click)='deleteData(i.name,in)' type="button" class="btn btn-large btn-danger">Delete</button>
+             <button (click)='editData(i,in)' type="button" class="btn btn-large btn-info">Edit</button>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     

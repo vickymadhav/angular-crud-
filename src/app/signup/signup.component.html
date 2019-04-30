@@ -1,0 +1,54 @@
+<div class="container">
+<div class="content-wrapper" style="overflow:hidden;">
+  <div class="panel panel-default">
+    <div class="panel-body" style="padding:0% !important">
+      <form role="form" #formRef='ngForm' (ngSubmit)='onSubmit(formRef.value)' style="background-color: #f5f5f5;">
+        <div class="row">
+          <div class="offset-md-5 col-lg-9" style="padding:18px;margin-left:10%;">
+            <div class="form-group required">
+              <label class="control-label">Name</label>
+              <input type="text" class="form-control " id="name" #nameRef='ngModel' name="name"
+                placeholder="Enter your Name" required ngModel>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Email :</label>
+              <input type="email" class="form-control" id="email" name="email" #emailRef='ngModel'
+                placeholder="Enter Email" ngModel>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Url :</label>
+                <input type="url" class="form-control" id="url" name="url" #urlRef='ngModel'
+                  placeholder="Enter url" ngModel>
+              </div>
+          
+            <div class="form-group required">
+              <label class="control-label">Mobile No :</label>
+              <input type="number" class="form-control " id="mobile" #nameRef='ngModel' name="mobile"
+                placeholder="Enter Mobile Number" required ngModel>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Date :</label>
+              <input type="date" class="form-control" id="sadate" #nameRef='ngModel' name="date"
+                placeholder="Enter DOB" required ngModel>
+            </div>
+            <div class="form-group required">
+              <label class="control-label">Description :</label>
+              <textarea type="text" style="height: 150px;" class="form-control " id="sname" #nameRef='ngModel' name="description"
+                placeholder="Enter description Status" required ngModel></textarea>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password :</label>
+                <input type="Password" class="form-control" id="surveyno" #nameRef='ngModel' name="password"
+                  placeholder="Enter Password" required ngModel>
+              </div>
+              <div class="panel-footer" style="margin-left: 300px;">
+                  <button type="submit" style="margin-right: 23px; width: 189px;" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
